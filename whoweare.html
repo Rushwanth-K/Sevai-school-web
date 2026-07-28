@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who We Are – SEVAI Shanthi Matriculation Higher Secondary School</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap');
+:root{
+  --indigo:#1B2A6B;
+  --indigo-deep:#10193F;
+  --sky:#3BB8D8;
+  --sky-deep:#2193B0;
+  --sky-light:#EBF7FB;
+  --cream:#FBF6EC;
+  --ink:#16213E;
+  --leaf:#3F7D58;
+  --white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--cream);color:var(--ink);font-family:'Source Serif 4',serif;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:'Lexend',sans-serif;letter-spacing:-0.01em;}
+.topbar{background:var(--indigo-deep);padding:8px 5vw;display:flex;align-items:center;justify-content:flex-end;gap:28px;}
+.topbar-item{display:flex;align-items:center;gap:7px;font-family:'Lexend';font-size:12.5px;color:#C8CEED;}
+.topbar-item svg{color:var(--sky);flex-shrink:0;}
+.topbar-item a{color:inherit;text-decoration:none;}
+.topbar-item a:hover{color:var(--sky);}
+.topbar-divider{width:1px;height:16px;background:rgba(255,255,255,0.15);}
+header{background:var(--white);border-bottom:3px solid var(--sky);box-shadow:0 2px 18px rgba(16,25,63,0.08);position:sticky;top:0;z-index:100;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;}
+.brand{display:flex;align-items:center;gap:14px;}
+.brand-logo{width:58px;height:58px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid #D8CFB4;box-shadow:0 0 0 3px var(--cream);}
+.brand-logo img{width:100%;height:100%;object-fit:cover;display:block;}
+.brand-name{font-family:'Lexend';font-weight:700;font-size:16.5px;color:var(--indigo-deep);line-height:1.2;}
+.brand-tagline{font-family:'Source Serif 4';font-style:italic;font-size:11.5px;color:var(--sky-deep);margin-top:3px;}
+.brand-board{font-family:'Lexend';font-size:10px;color:#7a82a8;margin-top:3px;font-weight:500;letter-spacing:0.02em;}
+nav{display:flex;align-items:center;gap:4px;}
+nav a{color:var(--indigo-deep);text-decoration:none;font-family:'Lexend';font-size:13.5px;font-weight:500;padding:8px 11px;border-radius:3px;transition:background .15s;white-space:nowrap;}
+nav a:hover{background:var(--sky-light);}
+nav a.active{color:var(--sky-deep);font-weight:600;}
+.nav-cta{background:var(--indigo-deep) !important;color:var(--white) !important;font-weight:600 !important;padding:10px 20px !important;margin-left:8px;border-radius:3px;}
+.nav-cta:hover{background:var(--sky) !important;color:var(--indigo-deep) !important;}
+.nav-dropdown{position:relative;}
+.nav-dropdown>a{display:flex;align-items:center;gap:5px;}
+.nav-dropdown>a svg{transition:transform .2s;}
+.nav-dropdown:hover>a svg{transform:rotate(180deg);}
+.dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid #E2DAC8;border-radius:6px;box-shadow:0 8px 28px -8px rgba(16,25,63,0.18);min-width:160px;overflow:hidden;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:200;}
+.nav-dropdown:hover .dropdown-menu{opacity:1;pointer-events:all;transform:translateY(0);}
+.dropdown-menu a{display:block;padding:11px 16px;font-family:'Lexend';font-size:13px;font-weight:500;color:var(--indigo-deep);text-decoration:none;border-bottom:1px solid #F0EAD8;transition:background .15s;}
+.dropdown-menu a:last-child{border-bottom:none;}
+.dropdown-menu a:hover{background:var(--sky-light);color:var(--sky-deep);}
+.page-banner{background:var(--indigo-deep);padding:64px 5vw 60px;position:relative;overflow:hidden;}
+.page-banner::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(59,184,216,0.12);}
+.page-banner::after{content:"";position:absolute;right:60px;top:60px;width:220px;height:220px;border-radius:50%;border:1px solid rgba(59,184,216,0.08);}
+.banner-inner{position:relative;z-index:1;}
+.breadcrumb{font-family:'Lexend';font-size:12px;font-weight:500;color:#8A97C8;letter-spacing:0.04em;margin-bottom:18px;}
+.breadcrumb a{color:#8A97C8;text-decoration:none;}
+.breadcrumb a:hover{color:var(--sky);}
+.breadcrumb span{margin:0 8px;opacity:0.5;}
+.page-banner h1{font-size:clamp(30px,3.6vw,46px);color:var(--white);font-weight:700;line-height:1.1;margin-bottom:14px;}
+.page-banner h1 em{font-style:normal;color:var(--sky);}
+.page-banner p{font-size:16px;color:#A9B3D6;max-width:560px;line-height:1.7;}
+.banner-rule{width:48px;height:3px;background:var(--sky);border-radius:2px;margin:20px 0 0;}
+.eyebrow{font-family:'Lexend';font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--leaf);display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--sky);display:inline-block;}
+.section-title{font-size:clamp(24px,2.6vw,32px);color:var(--indigo-deep);font-weight:700;margin-bottom:12px;line-height:1.2;}
+.intro-section{padding:86px 5vw 80px;display:grid;grid-template-columns:1fr 1fr;gap:70px;max-width:1160px;margin:0 auto;align-items:center;}
+.intro-text p{font-size:16px;line-height:1.8;color:#3a4470;margin-bottom:14px;}
+.intro-image{position:relative;}
+.intro-image .img-frame{border-radius:8px;overflow:hidden;border:3px solid var(--sky);aspect-ratio:4/3;background:var(--indigo-deep);display:flex;align-items:center;justify-content:center;}
+.img-placeholder{text-align:center;padding:40px;}
+.img-placeholder .icon{width:60px;height:60px;border-radius:50%;background:rgba(59,184,216,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--sky);}
+.img-placeholder p{font-family:'Lexend';font-size:11.5px;color:#8A97C8;letter-spacing:0.03em;line-height:1.6;}
+.intro-image .badge{position:absolute;bottom:-18px;right:-18px;background:var(--sky);color:var(--indigo-deep);font-family:'Lexend';font-weight:700;padding:18px 22px;border-radius:6px;text-align:center;box-shadow:0 8px 24px rgba(59,184,216,0.35);}
+.intro-image .badge b{display:block;font-size:26px;line-height:1;}
+.intro-image .badge span{font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;margin-top:4px;display:block;}
+.highlights{background:var(--indigo-deep);padding:56px 5vw;}
+.highlights-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;max-width:1080px;margin:0 auto;background:rgba(255,255,255,0.08);border-radius:8px;overflow:hidden;}
+.highlight-card{background:var(--indigo-deep);padding:36px 28px;text-align:center;transition:background .2s;}
+.highlight-card:hover{background:#162050;}
+.highlight-icon{width:52px;height:52px;border-radius:50%;background:rgba(59,184,216,0.15);border:1px solid rgba(59,184,216,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:var(--sky);}
+.highlight-card h4{font-family:'Lexend';font-size:15px;font-weight:600;color:var(--white);margin-bottom:6px;}
+.highlight-card p{font-family:'Lexend';font-size:11.5px;color:#8A97C8;letter-spacing:0.02em;}
+.messages-section{padding:90px 5vw;scroll-margin-top:100px;}
+.section-head{text-align:center;margin-bottom:68px;}
+.section-head .eyebrow{color:var(--sky-deep);justify-content:center;margin-bottom:14px;}
+.section-head .eyebrow::before{display:none;}
+.section-head h2{font-size:clamp(24px,2.6vw,32px);color:var(--indigo-deep);font-weight:700;}
+.msg-card{display:grid;grid-template-columns:260px 1fr;gap:0;align-items:start;max-width:1060px;margin:0 auto 72px;background:var(--white);border:1px solid #E2DAC8;border-radius:8px;overflow:hidden;box-shadow:0 12px 36px -16px rgba(16,25,63,0.14);}
+.msg-card.reverse{grid-template-columns:1fr 260px;}
+.msg-person{background:var(--indigo-deep);padding:44px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;height:100%;}
+.msg-card.reverse .msg-person{order:2;}
+.person-photo{width:150px;height:180px;border-radius:50%;background:rgba(59,184,216,0.15);border:3px solid var(--sky);display:flex;align-items:center;justify-content:center;margin-bottom:20px;overflow:hidden;flex-shrink:0;}
+.person-photo svg{color:var(--sky);opacity:0.6;}
+.person-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.person-name{font-family:'Lexend';font-weight:700;font-size:15px;color:var(--white);margin-bottom:6px;line-height:1.3;}
+.person-qual{font-family:'Lexend';font-size:10.5px;color:var(--sky);letter-spacing:0.04em;margin-bottom:10px;}
+.person-role{background:var(--sky);color:var(--indigo-deep);font-family:'Lexend';font-size:11px;font-weight:600;padding:5px 14px;border-radius:20px;letter-spacing:0.04em;text-transform:uppercase;}
+.msg-content{padding:44px 44px 44px 44px;}
+.msg-card.reverse .msg-content{padding:44px 44px 44px 44px;}
+.msg-content .quote-mark{font-family:'Lexend';font-size:72px;line-height:0.6;color:var(--sky);opacity:0.25;margin-bottom:10px;display:block;}
+.msg-content h3{font-size:20px;color:var(--indigo-deep);font-weight:700;margin-bottom:18px;}
+.msg-content p{font-size:15.5px;line-height:1.82;color:#3a4470;margin-bottom:14px;}
+.msg-content p:last-child{margin-bottom:0;}
+.msg-signature{margin-top:24px;padding-top:20px;border-top:1px dashed #D8CFB4;font-family:'Lexend';font-size:13px;color:var(--indigo-deep);font-weight:600;}
+.msg-signature span{display:block;font-weight:400;font-size:11.5px;color:#7a82a8;margin-top:3px;}
+.cta-strip{background:var(--sky);padding:60px 5vw;text-align:center;}
+.cta-strip h2{font-size:clamp(22px,2.4vw,28px);color:var(--indigo-deep);font-weight:700;margin-bottom:10px;}
+.cta-strip p{font-size:16px;color:var(--indigo-deep);opacity:0.8;margin-bottom:28px;}
+.cta-row{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;}
+.cta-btn{background:var(--indigo-deep);color:var(--white);font-family:'Lexend';font-weight:600;font-size:14px;padding:14px 28px;border-radius:3px;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:8px;}
+.cta-btn:hover{background:#0a1028;}
+.cta-btn.outline{background:transparent;border:2px solid var(--indigo-deep);color:var(--indigo-deep);}
+.cta-btn.outline:hover{background:var(--indigo-deep);color:var(--white);}
+footer{background:var(--indigo-deep);color:#A9B3D6;text-align:center;padding:28px 5vw;font-family:'Lexend';font-size:12px;letter-spacing:0.03em;border-top:3px solid var(--sky);}
+
+
+/* ====== HAMBURGER MOBILE NAV ====== */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+  padding:6px;
+  border:none;
+  background:none;
+}
+.hamburger span{
+  display:block;
+  width:25px;height:2.5px;
+  background:var(--indigo-deep);
+  border-radius:2px;
+  transition:all .3s ease;
+}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-menu{
+  display:none;
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:var(--indigo-deep);
+  z-index:999;
+  flex-direction:column;
+  padding:80px 6vw 40px;
+  overflow-y:auto;
+}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{
+  color:var(--white);text-decoration:none;
+  font-family:'Lexend';font-size:20px;font-weight:500;
+  padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.08);display:block;
+}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--sky);}
+.mobile-menu .mob-cta{
+  margin-top:28px;background:var(--sky);
+  color:var(--indigo-deep) !important;font-weight:700 !important;
+  padding:16px 28px !important;border-radius:6px;
+  text-align:center;font-size:16px !important;border-bottom:none !important;
+}
+.mob-close{
+  position:absolute;top:20px;right:20px;
+  background:none;border:none;color:var(--white);
+  font-size:32px;cursor:pointer;line-height:1;
+}
+@media(max-width:880px){
+  nav{display:none !important;}
+  .hamburger{display:flex !important;}
+  .brand-name{font-size:13px !important;}
+  .brand-tagline{font-size:10px !important;}
+  .brand-board{display:none !important;}
+  .brand-logo{width:44px !important;height:44px !important;}
+  .header-main{padding:10px 4vw !important;}
+  .topbar{display:none !important;}
+}
+
+@media(max-width:880px){
+  nav{display:none !important;}
+  .hamburger{display:flex !important;}
+  .brand-name{font-size:13px !important;}
+  .brand-tagline{font-size:10px !important;}
+  .brand-board{display:none !important;}
+  .brand-logo{width:44px !important;height:44px !important;}
+  .header-main{padding:10px 4vw !important;}
+  .topbar{display:none !important;}
+
+  /* Intro section */
+  .intro-section{
+    grid-template-columns:1fr !important;
+    gap:40px !important;
+    padding:50px 5vw !important;
+  }
+  .intro-image .badge{
+    right:10px !important;
+    bottom:-10px !important;
+  }
+
+  /* Highlights */
+  .highlights-grid{grid-template-columns:1fr 1fr !important;}
+
+  /* Messages - KEY FIX */
+  .msg-card{
+    grid-template-columns:1fr !important;
+    display:flex !important;
+    flex-direction:column !important;
+  }
+  .msg-card.reverse{
+    grid-template-columns:1fr !important;
+    display:flex !important;
+    flex-direction:column !important;
+  }
+  .msg-person{
+    order:1 !important;
+    width:100% !important;
+    padding:32px 20px !important;
+  }
+  .msg-card.reverse .msg-person{
+    order:1 !important;
+  }
+  .msg-content{
+    order:2 !important;
+    padding:28px 20px !important;
+    width:100% !important;
+  }
+  .msg-card.reverse .msg-content{
+    order:2 !important;
+    padding:28px 20px !important;
+  }
+
+  /* Page banner */
+  .page-banner{padding:40px 5vw !important;}
+  .page-banner h1{font-size:26px !important;}
+
+  /* CTA */
+  .cta-row{flex-direction:column !important;align-items:stretch !important;}
+  .cta-btn{justify-content:center !important;}
+}
+
+@media(max-width:480px){
+  .highlights-grid{grid-template-columns:1fr !important;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-item">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.45-.46a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
+    <a href="tel:04312612083">0431-2612083</a>
+  </div>
+  <div class="topbar-divider"></div>
+  <div class="topbar-item">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    <a href="mailto:sevaishanthimhss@gmail.com">sevaishanthimhss@gmail.com</a>
+  </div>
+  <div class="topbar-divider"></div>
+  <div class="topbar-item">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+    Mon &ndash; Sat &nbsp;9:00 AM &ndash; 5:00 PM
+  </div>
+</div>
+
+<header>
+  <div class="header-main">
+    <div class="brand">
+      <div class="brand-logo"><img src="logo.png" alt="SEVAI Shanthi School Logo"></div>
+      <div>
+        <div class="brand-name">SEVAI Shanthi Matric Hr. Sec. School</div>
+        <div class="brand-tagline">Shaping Futures, Inspiring Minds</div>
+        <div class="brand-board">State Board &nbsp;&bull;&nbsp; Recognized by Director of Matriculation Schools, Chennai &nbsp;&bull;&nbsp; DTCP Approved</div>
+      </div>
+    </div>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="whoweare.html" class="active">Who We Are</a>
+      <a href="academics.html">Academics</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="gallery.html">Gallery</a>
+      <div class="nav-dropdown">
+        <a href="contact.html">Contact
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6,9 12,15 18,9"/></svg>
+        </a>
+        <div class="dropdown-menu">
+          <a href="contact.html">Contact Us</a>
+          <a href="admissions.html">Admissions</a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-cta">Get Admission</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mob-close" id="mob-close">&times;</button>
+  <a href="homepage.html">Home</a>
+  <a href="whoweare.html" class="active">Who We Are</a>
+  <a href="academics.html">Academics</a>
+  <a href="facilities.html">Facilities</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="admissions.html">Admissions</a>
+  <a href="contact.html" class="mob-cta">Get Admission</a>
+</div>
+
+<section class="page-banner">
+  <div class="banner-inner">
+    <div class="breadcrumb"><a href="homepage.html">Home</a><span>&rsaquo;</span>Who We Are</div>
+    <h1>A school built on <em>trust</em>, grown through <em>dedication.</em></h1>
+    <p>Since 1997, SEVAI Shanthi has been more than a school — it is a community that believes every child deserves a strong foundation, a caring environment, and the freedom to grow.</p>
+    <div class="banner-rule"></div>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="intro-text">
+    <div class="eyebrow">Our Story</div>
+    <h2 class="section-title">Over two decades of shaping confident, capable learners</h2>
+    <p>Established in 1997–98, SEVAI Shanthi Matriculation Higher Secondary School has grown from a small institution in Pettavaithalai into one of the most trusted schools in the Tiruchirappalli region. Today, we serve over 1,800 students from Pre-KG through Class 12, guided by more than 72 qualified and dedicated teachers.</p>
+    <p>Affiliated to the State Board and recognized by the Director of Matriculation Schools, Chennai, our school follows an English-medium curriculum that blends child-centred learning with academic rigour.</p>
+    <p>We are proud of our 100% board results over three consecutive years — a reflection of the trust our students and families place in us every day.</p>
+  </div>
+  <div class="intro-image">
+    <div class="img-frame">
+      <div class="img-placeholder">
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+        </div>
+        <p>SCHOOL BUILDING PHOTO<br>[ Replace with actual campus image ]</p>
+      </div>
+    </div>
+    <div class="badge"><b>28+</b><span>Years of<br>Excellence</span></div>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="highlights-grid">
+    <div class="highlight-card">
+      <div class="highlight-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+      <h4>English Medium</h4><p>Full English-medium instruction from Pre-KG to Class 12</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+      <h4>State Board</h4><p>Affiliated to Tamil Nadu State Board &amp; DTCP approved</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+      <h4>Pre-KG to Class 12</h4><p>Complete schooling journey under one roof</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+      <h4>Since 1997</h4><p>Over 28 years of serving families across Tiruchirappalli</p>
+    </div>
+  </div>
+</section>
+
+<section class="messages-section" id="welcome-note">
+  <div class="section-head">
+    <div class="eyebrow">From Our Leaders</div>
+    <h2>Words from the people who lead our school</h2>
+  </div>
+
+  <!-- CORRESPONDENT -->
+  <div class="msg-card">
+    <div class="msg-person">
+      <div class="person-photo" id="corr-photo-wrap">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="person-name" id="corr-name">Dr. K. Govindaraju</div>
+      <div class="person-qual" id="corr-qual">M.Sc &nbsp;|&nbsp; M.A &nbsp;|&nbsp; M.Ed</div>
+      <div class="person-role">Correspondent</div>
+    </div>
+    <div class="msg-content">
+      <span class="quote-mark">&ldquo;</span>
+      <h3>A message from our Correspondent</h3>
+      <p id="corr-msg">Welcome to SEVAI Shanthi Matriculation Higher Secondary School. When we founded this institution, our vision was simple — to create a space where every child from this community could receive an education that was both excellent and accessible. That vision has guided every decision we have made over the past 28 years.</p>
+      <p>Education is not merely the transfer of knowledge. It is the nurturing of character, the building of confidence, and the planting of curiosity that lasts a lifetime. At SEVAI Shanthi, we hold this belief at the centre of everything we do.</p>
+      <p>I warmly invite you to be part of our family. Together, we will give your child the foundation they deserve.</p>
+      <div class="msg-signature" id="corr-sig">
+        Dr. K. Govindaraju
+        <span>Correspondent, SEVAI Shanthi Matric Hr. Sec. School</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRINCIPAL -->
+  <div class="msg-card reverse">
+    <div class="msg-content">
+      <span class="quote-mark">&ldquo;</span>
+      <h3>A message from our Principal</h3>
+      <p id="prin-msg">Every child who walks through our gates carries with them a unique potential — and it is our privilege, as educators, to help them discover it. At SEVAI Shanthi, we are committed to creating an environment where learning feels meaningful, curiosity is celebrated, and no student is left behind.</p>
+      <p>Our teachers bring not only subject expertise but genuine care for every student's growth. Through a blend of structured academics, co-curricular activities, and field experiences, we prepare students not just for examinations, but for life beyond the classroom.</p>
+      <p>To every parent reading this — I assure you that your child's wellbeing and progress will always be our highest priority. We look forward to walking this journey with you.</p>
+      <div class="msg-signature" id="prin-sig">
+        Mrs. P. Chitra
+        <span>Principal, SEVAI Shanthi Matric Hr. Sec. School</span>
+      </div>
+    </div>
+    <div class="msg-person">
+      <div class="person-photo" id="prin-photo-wrap">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="person-name" id="prin-name">Mrs. P. Chitra</div>
+      <div class="person-qual" id="prin-qual">M.A &nbsp;|&nbsp; M.B.A &nbsp;|&nbsp; B.Ed</div>
+      <div class="person-role">Principal</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <h2>Want to be part of our school family?</h2>
+  <p>Visit us, call us, or enquire online — we are happy to guide you through the admission process.</p>
+  <div class="cta-row">
+    <a href="admissions.html" class="cta-btn">Get Admission &rarr;</a>
+    <a href="contact.html" class="cta-btn outline">Contact Us</a>
+  </div>
+</section>
+
+<footer>
+  SEVAI Shanthi Matriculation Higher Secondary School &middot; Arumbuhal Nagar, Pettavaithalai, Tiruchirappalli &ndash; 639112
+</footer>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAUaSoWVm6_lWeHWd1M0_4BLrKqbIcryC8",
+  authDomain: "sevai-shanthi-school-web.firebaseapp.com",
+  projectId: "sevai-shanthi-school-web",
+  storageBucket: "sevai-shanthi-school-web.firebasestorage.app",
+  messagingSenderId: "261677685676",
+  appId: "1:261677685676:web:1e96b6918fc9e4978cf809",
+  databaseURL: "https://sevai-shanthi-school-web-default-rtdb.asia-southeast1.firebasedatabase.app"
+};
+
+const app = initializeApp(firebaseConfig);
+const db  = getDatabase(app);
+
+function updatePerson(path, ids) {
+  onValue(ref(db, "staff/" + path), function(snap) {
+    var d = snap.val();
+    if (!d) return;
+    if (d.name)          document.getElementById(ids.name).textContent = d.name;
+    if (d.qualification) document.getElementById(ids.qual).textContent = d.qualification;
+    if (d.message)       document.getElementById(ids.msg).textContent  = d.message;
+    if (d.name)          document.getElementById(ids.sig).innerHTML =
+      d.name + '<span>' + ids.role + '</span>';
+    if (d.photo) {
+      document.getElementById(ids.photoWrap).innerHTML =
+        '<img src="' + d.photo + '" alt="' + d.name + '" style="width:100%;height:100%;object-fit:cover;object-position:center top;">';
+    }
+  });
+}
+
+updatePerson('correspondent', {
+  name: 'corr-name', qual: 'corr-qual', msg: 'corr-msg',
+  sig: 'corr-sig', photoWrap: 'corr-photo-wrap',
+  role: 'Correspondent, SEVAI Shanthi Matric Hr. Sec. School'
+});
+
+updatePerson('principal', {
+  name: 'prin-name', qual: 'prin-qual', msg: 'prin-msg',
+  sig: 'prin-sig', photoWrap: 'prin-photo-wrap',
+  role: 'Principal, SEVAI Shanthi Matric Hr. Sec. School'
+});
+</script>
+
+
+<script>
+(function(){
+  var btn  = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  var cls  = document.getElementById('mob-close');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  });
+  cls.addEventListener('click', function(){
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+})();
+</script>
+</body>
+</html>
