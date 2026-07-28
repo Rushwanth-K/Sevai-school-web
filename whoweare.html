@@ -26,7 +26,7 @@ h1,h2,h3,h4{font-family:'Lexend',sans-serif;letter-spacing:-0.01em;}
 .topbar-item a{color:inherit;text-decoration:none;}
 .topbar-item a:hover{color:var(--sky);}
 .topbar-divider{width:1px;height:16px;background:rgba(255,255,255,0.15);}
-header{background:var(--white);border-bottom:3px solid var(--sky);box-shadow:0 2px 18px rgba(16,25,63,0.08);position:sticky;top:0;z-index:100;}
+header{background:var(--white);border-bottom:3px solid var(--sky);box-shadow:0 2px 18px rgba(16,25,63,0.08);position:sticky;top:0;z-homepage:100;}
 .header-main{display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;}
 .brand{display:flex;align-items:center;gap:14px;}
 .brand-logo{width:58px;height:58px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid #D8CFB4;box-shadow:0 0 0 3px var(--cream);}
@@ -44,7 +44,7 @@ nav a.active{color:var(--sky-deep);font-weight:600;}
 .nav-dropdown>a{display:flex;align-items:center;gap:5px;}
 .nav-dropdown>a svg{transition:transform .2s;}
 .nav-dropdown:hover>a svg{transform:rotate(180deg);}
-.dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid #E2DAC8;border-radius:6px;box-shadow:0 8px 28px -8px rgba(16,25,63,0.18);min-width:160px;overflow:hidden;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:200;}
+.dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid #E2DAC8;border-radius:6px;box-shadow:0 8px 28px -8px rgba(16,25,63,0.18);min-width:160px;overflow:hidden;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-homepage:200;}
 .nav-dropdown:hover .dropdown-menu{opacity:1;pointer-events:all;transform:translateY(0);}
 .dropdown-menu a{display:block;padding:11px 16px;font-family:'Lexend';font-size:13px;font-weight:500;color:var(--indigo-deep);text-decoration:none;border-bottom:1px solid #F0EAD8;transition:background .15s;}
 .dropdown-menu a:last-child{border-bottom:none;}
@@ -52,7 +52,7 @@ nav a.active{color:var(--sky-deep);font-weight:600;}
 .page-banner{background:var(--indigo-deep);padding:64px 5vw 60px;position:relative;overflow:hidden;}
 .page-banner::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(59,184,216,0.12);}
 .page-banner::after{content:"";position:absolute;right:60px;top:60px;width:220px;height:220px;border-radius:50%;border:1px solid rgba(59,184,216,0.08);}
-.banner-inner{position:relative;z-index:1;}
+.banner-inner{position:relative;z-homepage:1;}
 .breadcrumb{font-family:'Lexend';font-size:12px;font-weight:500;color:#8A97C8;letter-spacing:0.04em;margin-bottom:18px;}
 .breadcrumb a{color:#8A97C8;text-decoration:none;}
 .breadcrumb a:hover{color:var(--sky);}
@@ -140,7 +140,7 @@ footer{background:var(--indigo-deep);color:#A9B3D6;text-align:center;padding:28p
   position:fixed;
   top:0;left:0;right:0;bottom:0;
   background:var(--indigo-deep);
-  z-index:999;
+  z-homepage:999;
   flex-direction:column;
   padding:80px 6vw 40px;
   overflow-y:auto;
@@ -271,7 +271,7 @@ footer{background:var(--indigo-deep);color:#A9B3D6;text-align:center;padding:28p
       </div>
     </div>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="homepage.html">Home</a>
       <a href="whoweare.html" class="active">Who We Are</a>
       <a href="academics.html">Academics</a>
       <a href="facilities.html">Facilities</a>
@@ -292,7 +292,7 @@ footer{background:var(--indigo-deep);color:#A9B3D6;text-align:center;padding:28p
 </header>
 <div class="mobile-menu" id="mobile-menu">
   <button class="mob-close" id="mob-close">&times;</button>
-  <a href="index.html">Home</a>
+  <a href="homepage.html">Home</a>
   <a href="whoweare.html" class="active">Who We Are</a>
   <a href="academics.html">Academics</a>
   <a href="facilities.html">Facilities</a>
@@ -304,7 +304,7 @@ footer{background:var(--indigo-deep);color:#A9B3D6;text-align:center;padding:28p
 
 <section class="page-banner">
   <div class="banner-inner">
-    <div class="breadcrumb"><a href="index.html">Home</a><span>&rsaquo;</span>Who We Are</div>
+    <div class="breadcrumb"><a href="homepage.html">Home</a><span>&rsaquo;</span>Who We Are</div>
     <h1>A school built on <em>trust</em>, grown through <em>dedication.</em></h1>
     <p>Since 1997, SEVAI Shanthi has been more than a school — it is a community that believes every child deserves a strong foundation, a caring environment, and the freedom to grow.</p>
     <div class="banner-rule"></div>
